@@ -29,7 +29,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:                Hi! Welcome to My Blog. My Major is Computer Engineering.
+tagline:               Welcome to My Blog. My Major is Computer Engineering.
 
 # A list of keywords for your blog
 keywords:              ['Computer', 'Coding', 'Java/Python/HTML']
@@ -139,10 +139,10 @@ defaults:
       sitemap:         false
 
   # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  - scope:
+      type:            posts
+    values:
+      comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:

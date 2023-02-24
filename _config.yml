@@ -352,8 +352,8 @@ plugins:
 #   yandex:              <verification-id>
 
 # Used for twitter cards
-# twitter:
-#   username:            <username>
+ twitter:
+   username:            seohojun14
 
 # Used for facebook open graph
 # facebook:
@@ -365,7 +365,7 @@ plugins:
 social:
    name:                Seo Hojun
    links:
-     - https://twitter.com/henryseo1000
+     - https://twitter.com/seohojun14
      - https://github.com/henryseo1000
      - https://www.instagram.com/hojun_seo_0827/
 

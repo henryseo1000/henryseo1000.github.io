@@ -29,7 +29,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               개발자가 되기 위한 프로젝트와 </br> 공부 내용을 기록하는 블로그
+tagline:               개발자가 되기 위한 프로젝트와 공부 내용을 기록하는 블로그
 
 # A list of keywords for your blog
 keywords:              ['Computer', 'Coding', 'Java/Python/HTML']

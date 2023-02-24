@@ -58,7 +58,7 @@ menu:
   - title:             Study
     url:               /study/
   - title:             Travel
-    url:               /travellog/
+    url:               /travel/
   - title:             ETC
     url:               /etc/
 

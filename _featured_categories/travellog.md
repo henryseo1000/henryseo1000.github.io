@@ -3,15 +3,15 @@
 layout: list
 
 # The title of the tag's page.
-title: Project
+title: Travel Log
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: Project
+slug: travellog
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  프로젝트 목록
-  프로젝트 계획 등을 기록한다.
+  블로그에 포스팅된 내용들의 기록을 담는다.
+  걸어왔던 길이나 자취를 남기는 곳.
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true

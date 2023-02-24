@@ -422,5 +422,5 @@ jekyll_compose:
       image:
         path: /assets/img/sidebar-bg.jpg
       links:
-        - title: Project Link
+        - title: Project Link2/24
           url: https://example.com

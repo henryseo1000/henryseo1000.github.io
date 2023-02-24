@@ -57,8 +57,8 @@ menu:
     url:               /progress/
   - title:             Study
     url:               /study/
-  - title:             Travel Log
-    url:               /log/
+  - title:             Travel
+    url:               /travellog/
   - title:             ETC
     url:               /etc/
 

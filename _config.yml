@@ -362,12 +362,12 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-social:
-   name:                Seo Hojun
-   links:
-     - https://twitter.com/seohojun14
-     - https://github.com/henryseo1000
-     - https://www.instagram.com/hojun_seo_0827/
+#social:
+#   name:                Seo Hojun
+#   links:
+#     - https://twitter.com/seohojun14
+#     - https://github.com/henryseo1000
+#     - https://www.instagram.com/hojun_seo_0827/
 
 
 # Plugin Configs

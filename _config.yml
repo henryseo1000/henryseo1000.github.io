@@ -119,7 +119,7 @@ defaults:
   # all pages under a given path:
   - scope:
       path:            hyde/
-    values:
+    - values:
       accent_color:    rgb(38,139,210)
       theme_color:     rgb(32,32,32)
       accent_image:

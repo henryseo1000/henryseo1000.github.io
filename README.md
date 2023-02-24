@@ -18,5 +18,3 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 [^1]: Requires Bundler. Install with `gem install bundler`.
 
 [download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
-
-[참고]: https://khw11044.github.io/blog/githubpages/2020-12-26-making-blog-03/

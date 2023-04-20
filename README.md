@@ -1,4 +1,5 @@
-# Hydejack Starter Kit
+### Hydejack Starter Kit를 이용해 만들어보는 개인 블로그 사이트
+# Hydejack 정보
 
 A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
 

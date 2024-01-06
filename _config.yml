@@ -25,14 +25,13 @@ title:                 Living Rough
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  Welcome to my blog! My name is Hojun-Seo. I'm just getting started with coding. I want to be full-stack engineer in the future.
 
 # A shorter description for the sidebar.
 tagline:               개발자가 되기 위한 프로젝트와 공부 내용을 기록하는 블로그
 
 # A list of keywords for your blog
-keywords:              ['Computer', 'Coding', 'Java/Python/HTML']
+keywords:              ['Computer', 'Coding', 'Software', 'Hardware']
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -122,10 +121,10 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   - scope:
-      path:            hyde/
+      path:            /
     values:
       accent_color:    rgb(38,139,210)
-      theme_color:     rgb(32,32,32)
+      theme_color:     rgb(71,63,56)
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false

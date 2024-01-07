@@ -10,8 +10,6 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     <link href="{{ site.asset_url }}/favicon.png" rel="shortcut icon" type="image/png"/>
-
-    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhenryseo1000.github.io&count_bg=%23527E96&title_bg=%23787878&icon=opsgenie.svg&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"/></a>
     {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
     {% endif %}

@@ -8,19 +8,15 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    안녕하세요! 저는 서호준입니다.
-    2023년 기준으로 대학교 3학년입니다.
-    명지대학교를 다니고 있으며, 컴퓨터 공학과를 전공하고 있습니다.
-    백엔드와 인공지능, 3D 모델링에 관심이 많습니다.
-    연락하실 일 있으면 연락 주세요!
+    안녕하세요! 저는 서호준입니다. 컴퓨터 공학과를 전공하고 있습니다. 임베디드, AI, 웹에 관심이 많습니다.
 
   # This photo will be used in the about section
   picture:
     path:            /assets/img/IMG_1123.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
-    srcset:
-      1x:            /assets/img/IMG_1123.jpg
-      2x:            /assets/img/IMG_1123.jpg
+    # srcset:
+    #   1x:            /assets/img/IMG_1123.jpg
+    #   2x:            /assets/img/IMG_1123.jpg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide

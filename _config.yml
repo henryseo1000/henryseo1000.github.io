@@ -75,7 +75,7 @@ theme_mode: dark
 img_cdn: "https://henryseo1000.github.io"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/assets/img/IMG_1123.PNG"
+avatar: "/assets/img/IMG_3135.JPG"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -150,7 +150,7 @@ defaults:
   - scope:
       path: _drafts
     values:
-      comments: false
+      comments: true
   - scope:
       path: ""
       type: tabs # see `site.collections`

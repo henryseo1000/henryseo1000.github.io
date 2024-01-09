@@ -89,7 +89,7 @@ comments:
   # utterances settings › https://utteranc.es/
   utterances:
     repo: henryseo1000/henryseo1000.github.io
-    issue_term: [Comments From One Of Your Posts]
+    issue_term: pathname
     # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:

@@ -1,8 +1,8 @@
 <!-- The Side Bar -->
 
-<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-center">
   <header class="profile-wrapper">
-    <center>
+
       <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
         {% if site.avatar != empty and site.avatar %}
           {% capture avatar_url %}
@@ -17,26 +17,25 @@
           <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
         {% endif %}
       </a>
-  </center>
 
-    <center>
+
+
       <h1 class="site-title">
         <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </h1>
-    </center>
 
-    <center>
+
       <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
-    </center>
 
-    <center>
+
+
       <div class="hits">
         <a href="https://hits.seeyoufarm.com">
           <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhenryseo1000.github.io&count_bg=%23585858&title_bg=%232B2D54&icon=opsgenie.svg&icon_color=%23FFFFFF&title=Visitors&edge_flat=false" alt="hits"/>
         </a>
       </div>
-    </center>
-    
+
+
   </header>
   <!-- .profile-wrapper -->
 

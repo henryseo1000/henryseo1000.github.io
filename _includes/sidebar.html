@@ -2,33 +2,42 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {% if site.avatar != empty and site.avatar %}
-        {% capture avatar_url %}
-            {% if site.avatar contains '://' %}
-              {{ site.avatar }}
-            {% elsif site.img_cdn != empty and site.img_cdn %}
-              {{ site.avatar | prepend: site.img_cdn }}
-            {% else %}
-              {{ site.avatar | relative_url }}
-            {% endif %}
-          {% endcapture %}
-        <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {% endif %}
-    </a>
+    <center>
+      <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+        {% if site.avatar != empty and site.avatar %}
+          {% capture avatar_url %}
+              {% if site.avatar contains '://' %}
+                {{ site.avatar }}
+              {% elsif site.img_cdn != empty and site.img_cdn %}
+                {{ site.avatar | prepend: site.img_cdn }}
+              {% else %}
+                {{ site.avatar | relative_url }}
+              {% endif %}
+            {% endcapture %}
+          <img src="{{ avatar_url | strip }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        {% endif %}
+      </a>
+  </center>
 
-    <h1 class="site-title">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    </h1>
-    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    <center>
+      <h1 class="site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </h1>
+    </center>
+
+    <center>
+      <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    </center>
   </header>
   <!-- .profile-wrapper -->
 
-  <a href="https://hits.seeyoufarm.com">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhenryseo1000.github.io&count_bg=%23585858&title_bg=%232B2D54&icon=opsgenie.svg&icon_color=%23FFFFFF&title=Visitors&edge_flat=false" alt="hits"/>
-  </a>
-
   <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <div class="hits">
+      <a href="https://hits.seeyoufarm.com">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhenryseo1000.github.io&count_bg=%23585858&title_bg=%232B2D54&icon=opsgenie.svg&icon_color=%23FFFFFF&title=Visitors&edge_flat=false" alt="hits"/>
+      </a>
+    </div>
+
     <ul class="nav">
       <!-- home -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">

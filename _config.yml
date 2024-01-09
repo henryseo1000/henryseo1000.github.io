@@ -18,7 +18,7 @@ timezone: Asia/Seoul
 
 title: Living Rough # the main title
 
-tagline: 프로젝트 기록과 공부를 위한 블로그 # it will display as the sub-title
+tagline: 미치게 살아봐요. 뭔가에 홀린 것처럼. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   안녕하세요 저는 서호준입니다!
@@ -72,7 +72,7 @@ theme_mode: dark
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://henryseo1000.github.io"
+img_cdn: "https://cdn.jsdelivr.net/gh/henryseo1000/henryseo1000.github.io"
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/assets/img/IMG_3135.JPG"

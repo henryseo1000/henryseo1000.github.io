@@ -2,7 +2,6 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
-pin: true
 ---
 
 ### **1. Introduction**
@@ -34,6 +33,7 @@ pin: true
 ### 자격증/기타
 - 자격증 아직 없음
 - 정보처리 기사 자격증 취득 예정
+- 로봇 동아리 RATS 소속
 
 ### **3. Skills**
 ---

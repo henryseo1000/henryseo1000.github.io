@@ -12,8 +12,25 @@ p:nth-child(2) {
     color: #555555;
 }
 
+p a {
+    text-decoration: underline;
+}
+
+p:has(img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+blockquote {
+    padding: 5px 0px 5px 20px;
+    border-left: 5px solid#ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 h1 {
     font-size: 40px;
+    font-weight: bolder;
 }
 
 h2 {
@@ -22,11 +39,23 @@ h2 {
 }
 
 hr {
-    margin: 10px 50px;
+    height:1px;
+    margin: 10px 150px;
+    background:#555555;
+    border: 0;
 }
 
-ol li {
+table {
+    border: 1px solid #ffffff;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #ffffff;
+}
 
+tr, td, th {
+    border: 1px solid #ffffff;
 }
 
 pre {
@@ -38,6 +67,13 @@ pre {
 code:not(pre code) {
     padding: 3px;
     border-radius: 5px;
-    color: rgb(250, 87, 87);
+    color: rgb(87, 133, 250);
+    font-size: smaller;
     background-color: #222222;
+}
+
+img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
 }

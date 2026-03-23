@@ -22,12 +22,12 @@ const remarkSourceRedirect = (options) => {
     // available under `file.data`.But if you're using something different, you
     // should be able to access it under `file.path`, or pass it as a parameter
     // the the plugin `options`.
-    const slug = file.data?.rawDocumentData?.flattenedPath?.replace("posts/", "");
+    const slug = file.path;
     // This matches all images that use the markdown standard format ![label](path).
     visit(tree, "paragraph", (node) => {
       const image = node.children.find((child) => child.type === "image");
       if (image) {
-        image.url = `/${image.url}`
+        image.url = `${process.env.NODE_ENV === "production" ? "https://henryseo1000.github.io" : ""}/${decodeURIComponent(image.url.split('/')[0])}/${image.url.split('/')[1]}`;
       }
     });
     // This matches all MDX' <Image /> components & source elements that I'm
@@ -36,7 +36,7 @@ const remarkSourceRedirect = (options) => {
     visit(tree, "mdxJsxFlowElement", (node) => {
       if (node.name === "Image" || node.name === 'source') {
         const srcAttr = node.attributes.find((attribute) => attribute.name === "src");
-        srcAttr.value = `/${srcAttr.value}`;
+        srcAttr.value = `${process.env.NODE_ENV === "production" ? "https://henryseo1000.github.io" : ""}/${decodeURIComponent(srcAttr.value.split('/')[0])}/${srcAttr.value.split('/')[1]}`;
     }})
     }
 }
@@ -45,7 +45,7 @@ const remarkSourceRedirect = (options) => {
 const withMDX = createMDX({
     extension: /\.(md|mdx)$/,
     options: {
-      remarkPlugins: [remarkSourceRedirect],
+      remarkPlugins: [remarkSourceRedirect, ["remark-gfm", { strict: true, throwOnError: true }]],
       rehypePlugins: [],
     },
 });

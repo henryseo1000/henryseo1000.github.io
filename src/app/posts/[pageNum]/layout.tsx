@@ -1,3 +1,4 @@
+import Comments from "@/components/posts/Comments";
 
 
 export default function PageLayout({
@@ -8,6 +9,7 @@ export default function PageLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      <Comments/>
     </html>
   );
 }

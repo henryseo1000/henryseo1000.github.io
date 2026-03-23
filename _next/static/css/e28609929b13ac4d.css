@@ -1,1 +1,0 @@
-body{display:flex;flex-direction:column;gap:10px;padding:10px}p:nth-child(2){padding:10px;border:1px solid #333;border-radius:10px;color:#555}h1{font-size:40px}h2{font-size:25px;font-weight:700}hr{margin:10px 50px}pre{padding:15px;border-radius:10px;background-color:#222}code:not(pre code){padding:3px;border-radius:5px;color:#fa5757;background-color:#222}

@@ -9,7 +9,7 @@ export default function PageLayout({
   return (
     <html lang="en">
       <body>{children}</body>
-      <Comments/>
+      <Comments theme="github-dark"/>
     </html>
   );
 }

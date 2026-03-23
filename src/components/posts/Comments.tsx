@@ -2,21 +2,25 @@
 
 import React, { useEffect } from "react";
 
-export default function Comments () {
+interface CommentsProps {
+    theme : string
+}
+
+export default function Comments ({theme} : CommentsProps) {
 
     useEffect(() => {
         const utterancesIframe = document.querySelector<HTMLIFrameElement>(
-        "iframe.utterances-frame"
+            "iframe.utterances-frame"
         );
 
         if (!utterancesIframe) return;
 
-        // 테마 변경 메시지 전달
         utterancesIframe.contentWindow?.postMessage(
         {
-            type: "set-theme"
+            type: "set-theme",
+            theme
         },
-            "https://utteranc.es"
+            "https://utteranc.es",
         );
     }, [])
 
@@ -25,12 +29,17 @@ export default function Comments () {
             if (!elem) {
                 return;
             }
+
+            if (document.querySelectorAll('.utterances').length !== 0) {
+                return;
+            }
+
             const scriptElem = document.createElement('script');
             scriptElem.src = 'https://utteranc.es/client.js';
             scriptElem.async = true;
             scriptElem.setAttribute('repo', 'henryseo1000/henryseo1000.github.io');
-            scriptElem.setAttribute('issue-term', 'title');
-            scriptElem.setAttribute('theme', 'github-dark');
+            scriptElem.setAttribute("issue-term", "pathname");
+            scriptElem.setAttribute('theme', theme);
             scriptElem.setAttribute('label', 'blog-comment');
             scriptElem.crossOrigin = 'anonymous';
             elem.appendChild(scriptElem);

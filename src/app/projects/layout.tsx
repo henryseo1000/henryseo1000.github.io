@@ -1,7 +1,6 @@
-import Comments from "@/components/posts/Comments";
+"use client"
 
-
-export default function PageLayout({
+export default function ProjectsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -9,7 +8,6 @@ export default function PageLayout({
   return (
     <html lang="en">
       <body>{children}</body>
-      <Comments theme="github-dark"/>
     </html>
   );
 }

@@ -17,13 +17,13 @@ export async function generateStaticParams() {
 export default async function PageNum({params} : {params : Promise<{pageNum: string}>}) {
     const { pageNum } = await params;
 
-    const DynamicComponent = dynamic(() => import(`../../(markdowns)/${pageNum}.md`).then((comp) => {
+    const DynamicComponent = dynamic(() => import(`../(markdowns)/${pageNum}.md`).then((comp) => {
         return comp
     }));
 
     return (
-        <>
+        <div className='flex flex-col px-[40px] pt-[70px] pb-[45px] gap-[10px] border-[#4c4c4c] border-[1px] rounded-[20px] bg-[#2A2A2A]'>
             <DynamicComponent/>
-        </>
+        </div>
     )
 }

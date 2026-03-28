@@ -1,6 +1,3 @@
-import First from "../(markdowns)/1.md"
-
-
-export default function Text() {
-    return <First/>
+export default function PostsPage() {
+    return <>This is PostsPage.</>
 }

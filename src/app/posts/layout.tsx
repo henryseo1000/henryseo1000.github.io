@@ -1,6 +1,6 @@
 "use client"
 
-export default function PagesLayout({
+export default function PostsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

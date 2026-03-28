@@ -1,12 +1,23 @@
 import createMDX from '@next/mdx';
 import { visit } from "unist-util-visit";
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     output: 'export',
     basePath: process.env.NODE_ENV === "production" ? "/henryseo1000.github.io" : "",
-    assetPrefix : process.env.NODE_ENV === "production" ? "https://henryseo1000.github.io" : ""
+    assetPrefix : process.env.NODE_ENV === "production" ? "https://henryseo1000.github.io" : "",
+    webpack: (config) => {
+      // Add rule for SVG files
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      });
+
+      return config;
+    },
 };
 
 /**
@@ -37,7 +48,7 @@ const remarkSourceRedirect = (options) => {
       if (node.name === "Image" || node.name === 'source') {
         const srcAttr = node.attributes.find((attribute) => attribute.name === "src");
         srcAttr.value = `${process.env.NODE_ENV === "production" ? "https://henryseo1000.github.io" : ""}/${decodeURIComponent(srcAttr.value.split('/')[0])}/${srcAttr.value.split('/')[1]}`;
-    }})
+      }})
     }
 }
 
@@ -46,7 +57,7 @@ const withMDX = createMDX({
     extension: /\.(md|mdx)$/,
     options: {
       remarkPlugins: [remarkSourceRedirect, ["remark-gfm", { strict: true, throwOnError: true }]],
-      rehypePlugins: [],
+      rehypePlugins: [rehypeCodeTitles, rehypePrism],
     },
 });
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 interface CommentsProps {
     theme : string
@@ -25,25 +25,29 @@ export default function Comments ({theme} : CommentsProps) {
     }, [])
 
     return (
-        <div ref={(elem) => {
-            if (!elem) {
-                return;
-            }
+        <div 
+            className="flex w-full border-[1px] border-[#4C4C4C] rounded-[20px] bg-[#2A2A2A]"
+            ref={(elem) => {
+                if (!elem) {
+                    return;
+                }
 
-            if (document.querySelectorAll('.utterances').length !== 0) {
-                return;
-            }
-
-            const scriptElem = document.createElement('script');
-            scriptElem.src = 'https://utteranc.es/client.js';
-            scriptElem.async = true;
-            scriptElem.setAttribute('repo', 'henryseo1000/henryseo1000.github.io');
-            scriptElem.setAttribute("issue-term", "pathname");
-            scriptElem.setAttribute('theme', theme);
-            scriptElem.setAttribute('label', 'blog-comment');
-            scriptElem.crossOrigin = 'anonymous';
-            elem.appendChild(scriptElem);
-        }}>
+                if (document.querySelectorAll('.utterances').length !== 0) {
+                    return;
+                }
+                else {
+                    const scriptElem = document.createElement('script');
+                    scriptElem.src = 'https://utteranc.es/client.js';
+                    scriptElem.async = true;
+                    scriptElem.setAttribute('repo', 'henryseo1000/henryseo1000.github.io');
+                    scriptElem.setAttribute("issue-term", "pathname");
+                    scriptElem.setAttribute('theme', theme);
+                    scriptElem.setAttribute('label', 'blog-comment');
+                    scriptElem.crossOrigin = 'anonymous';
+                    elem.appendChild(scriptElem);
+                }
+            }}
+        >
         </div>
     )
 }

@@ -3,7 +3,6 @@ import Comments from "@/components/posts/Comments";
 import Navbar from "@/components/posts/Navbar";
 import ProgressBar from "@/components/posts/ProgressBar";
 
-
 export default function PageLayout({
   children,
 }: Readonly<{

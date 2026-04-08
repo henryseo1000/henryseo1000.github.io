@@ -16,7 +16,7 @@ echo "<!DOCTYPE html>\n
     <meta charset="UTF-8">
     <link rel=\"shortcut icon\" href=\"/favicon.ico\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <link rel=\"stylesheet\" href=\"./css/style.css\">
+    <link rel=\"stylesheet\" href=\"css/style.css\">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Web Study | By Henry</title>
 </head>
@@ -25,4 +25,4 @@ echo "<!DOCTYPE html>\n
 </body>
 </html>
 
-<script src=\"./js/script.js\"></script>" | tee index.html > '/dev/null'
+<script src=\"js/script.js\"></script>" | tee index.html > '/dev/null'

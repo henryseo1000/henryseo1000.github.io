@@ -1,4 +1,4 @@
 const c = document.createElement("div")
-c.innerText = 'test'
+c.innerText = 'test2'
 
 document.body.appendChild(c)

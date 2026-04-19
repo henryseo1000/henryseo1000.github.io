@@ -3,6 +3,7 @@
 mkdir $1
 mkdir $1/css
 mkdir $1/js
+mkdir $1/assets
 
 cd $PWD/$1
 

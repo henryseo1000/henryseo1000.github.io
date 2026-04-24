@@ -3,7 +3,7 @@ import { Wave } from "./wave.js";
 export class WaveGroup {
     constructor() {
         this.waveCount = 4;
-        this.wavePoints = 5;
+        this.wavePoints = 6;
 
         this.waves = [];
 

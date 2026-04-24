@@ -6,6 +6,12 @@ export class Wave {
         this.totalPoints = totalPoints;
         this.color = color;
         this.points = [];
+
+        window.addEventListener("mousemove", this.handleMouseDrag, false)
+    }
+
+    handleMouseDrag(e) {
+        
     }
 
     resize(stageWidth, stageHeight) {

@@ -26,4 +26,4 @@ echo "<!DOCTYPE html>\n
 </body>
 </html>
 
-<script src=\"js/script.js\"></script>" | tee index.html > '/dev/null'
+<script src=\"js/script.js\" type=\"module\"></script>" | tee index.html > '/dev/null'

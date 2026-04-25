@@ -1,15 +1,4 @@
-import firebaseConfig from "../../firebase.js";
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js'
-import { getAnalytics } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js'
-import { getAuth } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js'
-import { getFirestore, doc, getDoc, getDocs, addDoc, collection } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js'
-import { 
-    getDatabase,
-    set,
-    get,
-    ref,
-    update 
-} from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js';
+
 
 
 export class ChatMessage {

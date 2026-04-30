@@ -11,7 +11,8 @@ import {
     update,
     query
 } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js';
-import { getStorage } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-storage.js'
+import { getStorage } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-storage.js';
+import { v4 as uuidv4 } from 'https://cdn.jsdelivr.net/npm/uuid@14.0.0/+esm';
 import { ChatMessage } from "./chatMessage.js";
 import { TopBar } from "./topBar.js";
 import { ImageSender } from "./imageSender.js";
@@ -55,8 +56,13 @@ class App {
             this.initMessage();
 
             snapshot.forEach(async (item) => {
-                await getData(item.id).then((data) => {
-                    (new ChatMessage(data.username, data.message, data.created_time, this.user)).init()
+                await getData(item.id)
+                .then((data) => {
+                    (new ChatMessage(data.username, data.message, data.created_time, this.user, data.imageUrl)).init()
+                })
+                .then(() => {
+                    const messageArea = document.querySelector('#message_area');
+                    messageArea.scrollIntoView({behavior: "smooth", block: "end"})
                 })
             })
         })
@@ -89,6 +95,7 @@ class App {
         input.placeholder = "Type your message...";
         input.oninput = (e) => this.handleInput(e);
         input.value = this.inputText;
+        input.id = "text_input"
 
         const button = document.createElement("button");
         button.onclick = async () => await this.postData();
@@ -124,15 +131,32 @@ class App {
     }
 
     async postData(e) {
-        if(this.inputText.trim() === "") {
+        const textInput = document.querySelector("#text_input");
+        const imagePreview = document.querySelector("#image_preview");
+
+        if (this.inputText.trim() === "" && !imagePreview.src) {
             return;
         }
 
         try {
-            await addDoc(collection(this.db, "chat"), {
+            await addDoc(collection(this.db, "chat"), imagePreview.src ? {
+                username: this.user,
+                message: this.inputText,
+                created_time: Timestamp.now(),
+                imageUrl: imagePreview.src
+            } : 
+            {
                 username: this.user,
                 message: this.inputText,
                 created_time: Timestamp.now()
+            })
+            .then(() => {
+                const imageShower = document.querySelector("#image_shower");
+
+                textInput.value = "";
+                this.inputText = "";
+                this.imageSender.delete();
+                imageShower.style.display = "none";
             })
         } catch (e) {
             console.error("Error adding document: ", e);
@@ -142,11 +166,6 @@ class App {
     initMessage() {
         const messageArea = document.querySelector('#message_area');
         messageArea.innerHTML = ''
-    }
-
-    async uploadImage(e) {
-        const storageRef = getStorage();
-        const mountainsRef = ref(storage, 'mountains.jpg');
     }
 }
 

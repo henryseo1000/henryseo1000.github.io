@@ -1,12 +1,10 @@
-
-
-
 export class ChatMessage {
-    constructor(name, message, timestamp, current_user) {
+    constructor(name, message, timestamp, current_user, imageUrl) {
         this.username = name;
         this.message = message;
         this.timestamp = timestamp;
         this.current_user = current_user;
+        this.imageUrl = imageUrl;
     }
 
     init() {
@@ -21,8 +19,9 @@ export class ChatMessage {
         timestamp.innerText = this.timestamp.toDate();
 
         const username =  document.createElement('p');
-
-        const message =  document.createElement('p');
+        const messageText =  document.createElement('p');
+        const message =  document.createElement('div');
+        message.id = "message"
 
         if (this.username === this.current_user) {
             textDiv.id = "my_text";
@@ -34,13 +33,25 @@ export class ChatMessage {
         username.innerText = this.username;
         username.id = "username";
 
-        message.innerText = this.message;
-        message.id = "message";
+        messageText.innerText = this.message;
+        messageText.id = "message_text";
 
+        message.appendChild(messageText)
         textDiv.appendChild(username);
         messageDiv.appendChild(message);
         messageDiv.appendChild(timestamp);
         textDiv.appendChild(messageDiv);
+
+        if(this.imageUrl) {
+            const chatContainer = document.createElement('p');
+            chatContainer.id = "chat_container";
+
+            const chatImg = document.createElement('img');
+            chatImg.src = this.imageUrl;
+            chatImg.style.width = "100px";
+            chatContainer.appendChild(chatImg);
+            message.appendChild(chatContainer);
+        }
 
         messageArea.appendChild(textDiv);
     }
